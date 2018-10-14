@@ -1,0 +1,79 @@
+.navigation-pane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  border-right: 1px solid #EEE;
+
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
+
+  .pending-tag {
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	border-radius: 18px;
+	background: #C8584B;
+	text-align: center;
+	color: white;
+	line-height: 18px;
+	font-size: 8px;
+	z-index 99999;
+
+	&.contact {
+	  right: 74px;
+	  top: 10px;
+	}
+
+	&.pending {
+	  right: 3px;
+	  top: 5px;
+	  line-height: 20px;
+	  font-size:14px;
+	}
+  }
+
+  > ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+
+	> li {
+	  display: inline-block;
+	  height: 75px;
+	  width: 50%;
+	  text-align: center;
+	  line-height: 75px;
+	  color: lightgrey;
+	  background-color: #9CCD21 - #111111;
+	  cursor: pointer;
+
+	  .glyphicon {
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		border-radius: 20px;
+		border: 2px solid lightgrey;
+		color: lightgrey;
+		padding-top: 11px;
+		margin-right: 5px;
+	  }
+
+	  &:hover, &.selected {
+		background-color: #9CCD21;
+		color: white;
+
+		.glyphicon {
+		  color: white;
+		  border-color: white;
+		}
+	  }
+	}
+  }
+}

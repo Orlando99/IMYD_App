@@ -1,0 +1,142 @@
+.inbox-container {
+  .search-container {
+	height: 60px;
+	background: #F2F1EA;
+
+	.search-bar {
+	  width: 240px;
+	}
+
+	.glyphicon-edit {
+	  display: inline-block;
+	  width: 30px;
+	  height: 30px;
+	  font-size: 1em;
+	  border-radius: 20px;
+	  line-height: 2em;
+	  padding-left: .1em;
+	  text-align: center;
+	  background: #9CCD21;
+	  color: #FFF;
+	  cursor: pointer;
+	}
+  }
+
+  .threads {
+	overflow-y: auto;
+	position: absolute;
+	top: 135px;
+	bottom: 0;
+	width:300px;
+
+	.fetching {
+	  background-color: #9ccd21;
+	  border: 1px solid #FFF;
+	  height: 40px;
+	  width: 100px;
+	  line-height: 40px;
+	  position: fixed;
+	  top: 155px;
+	  left: 100px;
+	  box-shadow: 0 10px 35px -3px #000;
+	  border-radius: 5px;
+	  text-align: center;
+	  color: #FFF;
+	  z-index: 1;
+
+	  &:after {
+		content: '';
+		position: absolute;
+		top: 12px;
+		left: 10px;
+		width: 15px;
+		height: 15px;
+		background-image: url('../images/ajax-loader.gif');
+		background-size: cover;
+	  }
+	}
+  }
+
+  .thread {
+	position: relative;
+	padding: 10px 15px 10px 20px;
+	cursor: pointer;
+	border-bottom: 1px solid #EEE;
+
+	&.selected, &:hover {
+	  background: #F5FAE8;
+	}
+
+	.glyphicon-edit,
+	.glyphicon-remove,
+	.glyphicon-info-sign {
+	  display: none;
+	}
+
+	&:hover {
+	  .glyphicon-edit,
+	  .glyphicon-info-sign,
+	  .glyphicon-remov {
+		display: inline;
+		border: 2px solid #888;
+		background: #FFF;
+		color: #888;
+		border-radius: 20px;
+		padding: 5px;
+		position: absolute;
+		top: 20px;
+		right: 10px;
+
+		&:hover {
+		  border: 2px solid #9CCD21;
+		  color: #9CCD21;
+		}
+	  }
+	}
+
+	.summary {
+	  display: inline-block;
+	  margin:2px 5px 0 5px;
+	  width: 125px;
+	  text-overflow: ellipsis;
+
+	  .name {
+		color: #9CCD21;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		text-transform: capitalize;
+	  }
+
+	  .text {
+		font-size: 12px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	  }
+	}
+
+	.timestamp {
+	  display: inline-block;
+	  vertical-align: top;
+	  margin-top: 10px;
+	  margin-left: 5px;
+	  color: #CCC;
+	  font-size: 12px;
+	  text-align: right;
+	  width: 55px;
+	}
+
+	&.has-patient {
+	  .summary {
+		.name {
+		  color: #FF5439;
+		}
+	  }
+
+	  .Avatar {
+		background: #FF5439;
+	  }
+	}
+  }
+}

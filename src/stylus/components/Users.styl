@@ -1,0 +1,70 @@
+.users-pane {
+  > ul {
+	> li:last-child {
+	  width: 34%;
+	}
+  }
+}
+
+.users-pane {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  border-right: 1px solid #EEE;
+
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
+
+  > ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+
+	> li {
+	  display: inline-block;
+	  height: 30px;
+	  width: 33%;
+	  text-align: center;
+	  line-height: 30px;
+	  color: black;
+	  background-color: #FFF;
+	  cursor: pointer;
+
+	  .glyphicon {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		border-radius: 20px;
+		border: 2px solid lightgrey;
+		color: lightgrey;
+		padding-top: 0;
+		margin-right: 5px;
+	  }
+
+	  &:hover, &.selected {
+		background-color: #f2f1ea;
+		color: black;
+
+		.glyphicon {
+		  color: white;
+		  border-color: white;
+		}
+	  }
+	}
+  }
+
+  &.forward-message {
+	> ul > li {
+	  display: inline-block;
+	  height: 30px;
+	  width: 50%;
+	}
+  }
+}

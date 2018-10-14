@@ -1,0 +1,4 @@
+apps:
+        script: proxy.js
+        instances: 4
+        args: clientip=146.88.102.20 clientport=443 socketip=s.imyourdoc.com socketpath=/imyd-webchat-web socketport=8443 serverip=s.imyourdoc.com serverpath=/imyd-webchat-api serverport=8443 authip=s.imyourdoc.com authpath=/imyd-auth-stateless-web authport=8443 imageserverip=api.imyourdoc.com

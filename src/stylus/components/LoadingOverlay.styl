@@ -1,0 +1,25 @@
+.loading-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(192, 192, 192, 0.6);
+  z-index: 1000;
+
+  .loader {
+    margin-bottom: 40px;
+
+    .loader-inner > div {
+      background-color: #333;
+    }
+  }
+
+  .loading-message {
+    font-size: 18px;
+  }
+}

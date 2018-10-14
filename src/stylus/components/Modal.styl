@@ -1,0 +1,153 @@
+.modal-container {
+	.modal-backdrop {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1040;
+		background-color: #373A47;
+	}
+
+	.modal {
+		z-index: 1050;
+		position: fixed;
+		transform: translate3d(-50%, -50%, 0);
+		top: 50%;
+		left: 50%;
+		bottom:0;
+		background: #FFF;
+		width: 500px;
+		display: block;
+		border: 1px solid #FFF;
+		box-shadow: 0 10px 35px -3px #000;
+
+		.header {
+			margin-top: 0;
+			padding: 20px;
+			background: #9CCD21;
+			margin-bottom: 20px;
+
+			h3 {	
+				color: #FFF;
+				margin: 0;
+				text-align: center;
+			}
+		}
+
+		button {
+			position: absolute;
+			bottom: 20px;
+			right: 30px;
+			height: 40px;
+			width: 100px;
+			line-height: 25px;
+			font-size: 20px;
+			font-weight: normal;
+			background: #9CCD21;
+			color: white;
+			border: none;
+			outline: 0;
+
+			&:disabled {
+				background: #a3a59e;
+				cursor: not-allowed;
+			}
+		}
+	}
+
+
+  	&.no-animate {
+	  .modal-backdrop {
+		opacity: 0.6;
+	  }
+	}
+	  
+	&.animate {
+		.modal-backdrop {
+			animation-duration: 0.4s;
+			animation-fill-mode: forwards;
+			animation-timing-function: cubic-bezier(0.7,0,0.3,1);
+			animation-name: modalBackgroundDropDownShow;
+		}
+
+		.modal {
+			animation-duration: 0.4s;
+			animation-fill-mode: forwards;
+			animation-timing-function: cubic-bezier(0.7,0,0.3,1);
+			animation-name: modalDropDownShow;
+		}
+	}
+}
+
+.saving-container {
+	opacity: 0;
+	display: none;
+	background-color: #9ccd21;
+	border: 1px solid #FFF;
+	height: 40px;
+	width: 100px;
+	line-height: 40px;
+	position: absolute;
+	top: 100px;
+	left: calc(50% - 50px);
+	box-shadow: 0 10px 35px -3px #000;
+	border-radius: 5px;
+	text-align: center;
+	color: #FFF;
+	z-index: 1;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 12px;
+		left: 10px;
+		width: 15px;
+		height: 15px;
+		background-image: url('../images/ajax-loader.gif');
+		background-size: cover;
+	}
+}
+
+.saving {
+	.saving-container {
+		animation-duration: 0.4s;
+		animation-fill-mode: forwards;
+		animation-timing-function: cubic-bezier(0.7,0,0.3,1);
+		animation-name: savingShow;
+
+		display: block;
+	}
+}
+
+@keyframes savingShow {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes modalBackgroundDropDownShow {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 0.6;
+	}
+}
+
+@keyframes modalDropDownShow {
+	from {
+		opacity: 0;
+        transform: translate3d(-50%, -300px, 0);
+	}
+
+	to {
+		opacity: 1;
+        transform: translate3d(-50%, -50%, 0);
+	}
+}

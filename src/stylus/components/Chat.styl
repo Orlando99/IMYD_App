@@ -1,0 +1,115 @@
+.chat-container {
+	position: absolute;
+	top: 0;
+	left: 300px;
+	height: calc(100% - 60px);
+	width: calc(100% - 300px);
+	background: transparent;
+
+	.from {
+		position: fixed;
+		top: 0;
+		left: 300px;
+		margin: 5px 15px 5px 20px;
+		z-index: 2;
+
+		.who {
+			display: inline-block;
+			margin-top: 8px;
+			margin-left: 5px;
+
+			.name {
+				color: #9CCD21;
+			}
+
+			.title {
+				font-size: 12px;
+			}
+		}
+
+		&.has-patient {
+			.Avatar {
+				background: #FF5439;
+			}
+
+			.who {
+				.name {
+					color: #FF5439;
+				}
+			}
+		}
+	}
+
+	.checkbox-container {
+		background-color: white;
+		border-bottom: 1px solid darkgray;
+		position: absolute;
+		top: 60px;
+		left: 0;
+		right: 0;
+		height: 40px;
+		padding: 7px 20px;
+		box-sizing: border-box;
+		z-index: 10;
+	}
+
+	.messages-container {
+		position: absolute;
+		top: 60px;
+		bottom: 0;
+		width: 100%;
+		padding: 10px 20px 10px 20px;
+		overflow: auto;
+
+		> .timestamp {
+			margin: 20px;
+			color: #CCC;
+			text-align: center;
+		}
+
+		&.export-visible {
+			top: 100px;	
+		}
+	}
+
+	.typingContainer {
+		color: #CCC;
+
+		.typing {
+			display: inline-block;
+			border-radius: 50px;
+			padding-top: 2px;
+			margin-top: 20px;
+			margin-bottom: 10px;
+			margin-left: 60px;
+			margin-right: 10px;
+			width: 45px;
+			color: #FFF;
+			background: #CCC;
+			box-shadow: 2px 2px 24px -7px rgba(0,0,0,0.75);
+			text-align: center;
+
+			.glyphicon {
+				padding: 0;
+				margin: 0;
+				overflow: hidden;
+				display: inline-block;
+				width: 0;
+				-webkit-animation: ellipsis steps(4,end) 1150ms infinite;
+	  			animation: ellipsis steps(4,end) 1150ms infinite;
+			}
+		}
+	}
+}
+
+@keyframes ellipsis {
+	to {
+		width: 20px;
+	}
+}
+
+@-webkit-keyframes ellipsis {
+	to {
+		width: 20px;
+	}
+}

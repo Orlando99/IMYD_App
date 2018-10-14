@@ -1,0 +1,110 @@
+.contact-modal-new {
+  .modal {
+    height: 490px;
+
+    .contacts-container {
+      overflow: auto;
+      margin-top:20px;
+      height: calc(100% - 90px);
+
+      .contacts-new {
+        overflow-y: auto;
+        height: calc(100% - 60px);
+        margin-top: 20px;
+      }
+
+      .contact {
+        position: inherit;
+        padding: 0;
+        cursor: inherit;
+        border-bottom:inherit;
+      }
+
+    }
+
+    .error-message {
+      color: #C8584B;
+      margin: 10px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .add-contact-form-top {
+      height:290px;
+
+      button {
+        top: 80%;
+      }
+    }
+
+    .add-contact-form {
+      select {
+        width: 440px;
+      }
+
+      .select2-container {
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        background-color: #fafafa;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        padding: 5px;
+        height: 40px;
+
+        .select2-selection--single {
+          .select2-selection__rendered {
+            padding-left: 0;
+          }
+        }
+      }
+
+      .select2-container--default {
+        .select2-selection--single {
+          background-color: transparent;
+          border: none;
+          border-radius: 0;
+
+          .select2-selection__arrow {
+            top: 5px;
+          }
+        }
+      }
+    }
+
+    .add-contact-external {
+      height:80px;
+
+      .external-accept-or {
+        color: #c6c4c4;
+        font-weight: bold;
+        font-size: 20px;
+        display: block;
+        margin-top: -35px;
+        margin-right: auto;
+        margin-left: auto;
+        width: 50px;
+        background-color: white;
+        text-align: center;
+      }
+
+      .separator {
+        margin-top: 50px;
+        margin-bottom: 30px;
+
+        & > div {
+          margin-top: 20px;
+          margin-bottom: 20px;
+          border: 0;
+          border-top: 2px solid #eee;
+        }
+      }
+
+      .external-link {
+        font-size: 15px;
+        text-align center;
+      }
+    }
+  }
+}
+

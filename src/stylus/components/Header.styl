@@ -1,0 +1,59 @@
+.header-container {
+	position: relative;
+	height: 60px;
+	background: #F2F1EA;
+	margin-left: 300px;
+	z-index: 1;
+
+	.user-container {
+		display: inline-block;
+		position: absolute;
+		right: 10px;
+		text-transform: capitalize;
+		cursor: pointer;
+		padding: 15px;
+		line-height: 33px;
+		z-index: 1;
+
+		-webkit-user-select: none; /* Chrome/Safari */        
+		-moz-user-select: none; /* Firefox */
+		-ms-user-select: none; /* IE10+ */
+
+		/* Rules below not implemented in browsers yet */
+		-o-user-select: none;
+		user-select: none;
+
+		.glyphicon-chevron-down {
+			color: grey;
+			vertical-align: middle;
+			margin-left: 5px;
+		}
+	}
+
+	.user-options-container {
+		position: fixed;
+		top: 50px;
+		right: 20px;
+		background: white;
+		border: 1px solid grey;
+		border-radius: 5px;
+		box-shadow: 2px 2px 24px -7px rgba(0,0,0,0.75);
+		z-index: 1;
+
+		ul {
+			padding: 0;
+			margin-bottom: 0;
+
+			li {
+				list-style-type: none;
+				padding: 10px 30px;
+				cursor: pointer;
+
+				&:hover {
+					background: #9CCD21;
+					color: white;
+				}
+			}
+		}
+	}
+}

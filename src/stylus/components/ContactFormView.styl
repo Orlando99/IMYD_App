@@ -1,0 +1,132 @@
+.contact-form {
+	overflow: auto;
+	height: calc(100% - 90px);
+	position: relative;
+
+	.close {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 100%;
+
+		span {
+			float: right;
+		}
+	}
+
+	.Avatar {
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+
+	> div {
+		text-align: center;
+		margin-bottom: 5px;
+	}
+
+	.contact-name {
+		text-transform: capitalize;
+		font-size: 18px;
+		color: #9ccd21;
+	}
+
+	.contact-email {
+		.glyphicon-envelope {
+			color: #9ccd21;
+			margin-right: 5px;
+			top: 3px;
+		}
+	}
+	
+	.contact-phone {
+		.glyphicon-earphone {
+			color: #9ccd21;
+			margin-right: 5px;
+			top: 3px;
+		}
+	}
+
+	.invite-buttons {
+		button {
+			position: relative;
+			right: auto;
+			bottom: auto;
+			margin-right: 5px;
+		}
+	}
+
+	hr {
+		margin-top: 10px;
+		margin-bottom: 5px;
+	}
+
+	.contact-primary-network,
+	.contact-practice-type {
+		display: inline-block;
+		width: 50%;
+		vertical-align: top;
+
+		label {
+			display: block;
+		}
+	}
+}
+
+
+@media (min-height: 300px) {
+
+	.contact-form {
+		font-size: 10px;
+		line-height: 11px;
+		margin-top:10px;
+		height: calc(100% - 35px);
+
+		.contact-name {
+			font-size: 12px;
+		}
+	}
+}
+
+
+@media (min-height: 740px) {
+
+	.contact-form {
+		font-size: 12px;
+		line-height: 13px;
+		margin-top:10px;
+		height: calc(100% - 35px);
+
+		.contact-name {
+			font-size: 14px;
+		}
+	}
+}
+
+@media (min-height: 820px) {
+
+	.contact-form {
+		font-size: 14px;
+		line-height: 15px;
+		margin-top:10px;
+		height: calc(100% - 35px);
+
+		.contact-name {
+			font-size: 16px;
+		}
+	}
+}
+
+@media (min-height: 900px) {
+
+	.contact-form {
+		font-size: 16px;
+		line-height: 17px;
+		margin-top:10px;
+		height: calc(100% - 35px);
+
+		.contact-name {
+			font-size: 18px;
+		}
+	}
+}

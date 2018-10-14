@@ -1,0 +1,47 @@
+.profile-picture {
+	height: 325px;
+
+	&.error {
+		.Avatar {
+			border: 4px solid #C8584B;
+		}
+	}
+
+	.Avatar {
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		height: 12.2em;
+		width: 12.2em;
+		font-size: 1.5em;
+		line-height: 12.2em;
+		border-radius: 140px;
+	}
+
+	&.drag-enter {
+		border: 1px solid #C8584B;
+	}
+
+	.buttons {
+		width: 200px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.glyphicon-paperclip {
+		display: inline-block;
+		width: 75px;
+		font-size: 30px;
+		color: #CCC;
+		padding: 15px 20px 15px 85px;
+		cursor: pointer;
+
+		&.has-attachment {
+			color: #C8584B;
+		}
+
+		input {
+			visibility: hidden;
+		}
+	}
+}

@@ -1,0 +1,30 @@
+.context-menu-container {
+	position:absolute;
+	background-color: #f2f1ea;
+	color: #000;
+	border:1px solid #aaaaaa;
+	z-index 99999;
+
+	.context-menu {
+		list-style none;
+		margin:0;
+		padding:0;
+	}
+
+	.context-menu-item {
+		padding:5px;
+		border-bottom:1px solid #aaaaaa;
+		cursor:pointer;
+		font-size:14px;
+		text-align center;
+
+		&:hover {
+			background-color #bbbab4;
+		}
+
+		&:last-child {
+			border-bottom:none;
+		}
+	}
+
+}

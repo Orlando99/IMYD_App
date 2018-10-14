@@ -1,0 +1,117 @@
+.forward-modal {
+
+	.modal {
+		width: 300px;
+		top: 10%;
+		bottom:10%;
+
+		.container {
+			overflow: auto;
+			height: calc(100% - 160px);
+			width: auto;
+		}
+
+		.users-pane {
+			top:65px;
+			bottom: 65px;
+
+			.search-container{
+
+				.search-bar{
+					width:calc(100% - 20px)
+				}
+
+				.glyphicon-plus {
+					display:none;
+				}
+			}
+
+			.contacts-container {
+				.contacts {
+				  	width:100%;
+
+				  	.add-more {
+					  	display:none;
+				  	}
+				}
+
+				.contact {
+					width: 280px;
+					padding: 10px 15px;
+					margin-right: 20px;
+
+					&:hover{
+						.glyphicon {
+							display: none;
+						}
+					}
+
+					.Avatar.large {
+						height: 40px;
+						width: 40px;
+					}
+
+					.summary {
+						width: 200px;
+					}
+				}
+
+				.contact.selected{
+					background-color rgba(117, 176, 186, 0.29);
+				}
+			}
+
+			.rooms-container {
+				.rooms{
+					width:100%;
+				}
+
+				.room {
+					width: 280px;
+					padding: 10px 15px;
+					margin-right: 20px;
+
+					&:hover{
+						.glyphicon {
+							display: none;
+						}
+					}
+
+					.Avatar.large {
+						height: 40px;
+						width: 40px;
+					}
+
+					.summary {
+						width: 200px;
+					}
+				}
+
+				.room.selected{
+					background-color rgba(117, 176, 186, 0.29);
+				}
+			}
+
+		}
+	}
+
+	&.animate {
+
+		.modal {
+			animation-name: contextMenu !important;
+		}
+	}
+
+}
+
+@keyframes contextMenu {
+	from {
+		opacity: 0;
+		transform: translate3d(-50%, -300px, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(-50%, 0, 0);
+	}
+}

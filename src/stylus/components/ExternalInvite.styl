@@ -1,0 +1,128 @@
+.contact-modal-external-invite {
+  .modal {
+	width:975px !important;
+	height:585px;
+
+	.external-invite-container {
+	  margin-top:-20px;
+	  overflow: auto;
+	  height: calc(100% - 65px);
+
+	  .external-invite-left {
+		padding:35px 20px;
+		width:386px;
+		height:100%;
+		background-color: #fafafa;
+		border-right:1px solid #ededed;
+
+		.external-invite-left-img {
+		  width:187px;
+		  height:187px;
+		  display:block;
+		  background: url('../images/env_in_circle.png');
+		  margin:10px auto 35px auto;
+		}
+
+		.external-invite-title {
+		  padding:10px;
+		  font-size:16px;
+		  line-height:18px;
+		  font-weight bold;
+		  text-align center;
+		  color: #535457;
+		}
+	  }
+
+	  .external-invite-right {
+		padding:35px 30px;
+		width:586px;
+		height:100%;
+
+		.row {
+		  margin-top:10px;
+		}
+	  }
+
+	  form > div {
+		.person-is {
+		  float:left;
+		}
+	  }
+
+	  .full-length {
+		width:509px;
+	  }
+	}
+
+
+	.invalid {
+	  border: 1px solid red !important;
+	}
+
+	.error-message {
+	  color: #C8584B;
+	  margin: 10px;
+	  width: 100%;
+	  text-align: center;
+	}
+
+	label {
+	  display: block;
+	  font-weight: bold;
+	  font-size: 14px;
+	  margin-left: 10px;
+	  margin-top: 10px;
+	  color: #888;
+	}
+	select{
+	  width: 509px;
+	}
+
+	input, textarea {
+	  display: block;
+	  border: 1px solid #ccc;
+	  border-radius: 2px;
+	  background-color: #fafafa;
+	  margin: 5px 10px 0 10px;
+	  padding: 5px;
+	  height: 40px;
+	  width: 230px;
+
+	  &:focus {
+		background-color: #FFF;
+	  }
+
+	  &.security-question {
+		width: calc(100% - 20px);
+	  }
+	}
+
+	.select2-container {
+	  border: 1px solid #ccc;
+	  border-radius: 2px;
+	  background-color: #fafafa;
+	  margin: 0 10px 0 10px;
+	  padding: 5px;
+	  height: 40px;
+
+	  .select2-selection--single {
+		.select2-selection__rendered {
+		  padding-left: 0;
+		}
+	  }
+	}
+
+	.select2-container--default {
+	  .select2-selection--single {
+		background-color: transparent;
+		border: none;
+		border-radius: 0;
+
+		.select2-selection__arrow {
+		  top: 5px;
+		}
+	  }
+	}
+  }
+}
+

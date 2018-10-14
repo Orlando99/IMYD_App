@@ -1,0 +1,252 @@
+.message-container {
+	display: flex;
+	align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 15px;
+
+	&.selected {
+		background-color: #daecaa;
+	}
+
+  .message-wrap {
+		max-width: calc(100% - 52px);
+		display: inline-block;
+		vertical-align: bottom;
+		position: relative;
+
+		.sender {
+			margin-left: 13px;
+			margin-top: -15px;
+			float: left;
+			color: #888;
+			font-size: 12px;
+		}
+
+		.sending-failed {
+			color red;
+		}
+
+		.clearfix {
+			clear:both;
+		}
+
+		.message {
+			min-width: 145px;
+			border-radius: 10px;
+			padding: 15px 15px 15px 15px;
+			margin: 20px 10px 20px 10px;
+			color: #FFF;
+			background: #777;
+			vertical-align: bottom;
+			position: relative;
+			box-shadow: 2px 2px 24px -7px rgba(0,0,0,0.75);
+			word-wrap: break-word;
+
+			span.error {
+				color: #C8584B;
+			}
+
+			.content {
+				&.error {
+					color: #ff5439;
+					cursor: pointer;
+				}
+
+				a {
+					color: #75e730;
+					&:hover {
+						color: #75e730;
+					}
+				}
+			}
+
+			.resend {
+				position: absolute;
+				top: 15px;
+				right: 15px;
+				width: 20px;
+				height: 20px;
+				font-size: 1em;
+				border-radius: 20px;
+				line-height: 1.5em;
+				padding-right: 0.1em;
+				text-align: center;
+				background: #FFF;
+				color: #9ccd21;
+				cursor: pointer;
+
+				&.resending {
+					background-color: #DDD;
+				}
+			}
+
+			.file {
+				width: 100px;
+				height: 100px;
+				background-image: url('../images/default.png');
+				background-size: cover;
+
+				&.pdf {
+					background-image: url('../images/pdf.png');
+				}
+				&.ppt {
+					background-image: url('../images/ppt.png');
+				}
+				&.xls {
+					background-image: url('../images/excel.png');
+				}
+				&.txt {
+					background-image: url('../images/text.png');
+				}
+				&.docx, &.doc {
+					background-image: url('../images/word.png');
+				}
+				&.loading {
+					width: 50px;
+					height: 50px;
+					background-image: url('../images/ajax-loader.gif');
+				}
+				&.error {
+					border: 4px solid #C8584B;
+				}
+			}
+
+			&.left {
+
+				&:before {
+					content: '';
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 0 0 10px 10px;
+					border-color: transparent transparent #777 transparent ;
+					position: absolute;
+					bottom: 0px;
+					left: -10px;
+				}
+
+				&:after {
+					content: '';
+					width: 10px;
+					height: 10px;
+					background: #777;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+				}
+			}
+
+			&.right {
+
+			&:before {
+				content: '';
+				width: 10px;
+				height: 10px;
+				background: #9CCD21;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}
+
+				&:after {
+					content: '';
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 10px 0 0 10px;
+					border-color: transparent transparent transparent #9CCD21;
+					position: absolute;
+					bottom: 0px;
+					right: -10px;
+				}
+			}
+		}
+  }
+  .Avatar {
+		vertical-align: bottom;
+		background: #777;
+		background-size: cover;
+		margin-bottom: 10px;
+  }
+
+  &.is-current-user {
+		clear: both;
+		justify-content: flex-end;
+
+		.checkbox {
+			margin-left: 5px;
+			padding-left: 20px;
+		}
+
+		.Avatar {
+			background: #9CCD21;
+		}
+
+		.message {
+			background: #9CCD21;
+			background-size: cover;
+
+			.content {
+				a {
+					color: #337ab7;
+					&:hover {
+						color: #337ab7;
+					}
+				}
+			}
+		}
+  }
+
+  .status {
+		color: #888;
+		font-size: 12px;
+
+		&.left {
+			float: left;
+			margin-left: 13px;
+			margin-top: -15px;
+		}
+
+		&.right {
+			float: right;
+			margin-right: 13px;
+			margin-top: -15px;
+		}
+		.read-more {
+			display: inline-block;
+			width: 15px;
+			height: 15px;
+			margin-left:10px;
+			vertical-align middle
+			background: url("../images/info_small.png");
+			background-size: cover;
+		}
+  }
+}
+
+.tooltip {
+  position: fixed;
+  opacity: 1;
+  box-shadow: 0 10px 35px -3px #000;
+  border-radius: 5px;
+  background: #FFF;
+
+  table {
+		border-collapse: collapse;
+  }
+
+  th {
+		font-weight: bold;
+  }
+
+  th, td {
+		border: 1px solid #000;
+		padding: 5px;
+  }
+
+  .name {
+		width: 150px;
+  }
+}

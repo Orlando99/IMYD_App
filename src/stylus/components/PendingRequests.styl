@@ -1,0 +1,64 @@
+.contacts-container {
+
+  .contacts {
+	> div {
+	  &.first {
+		border-top: 1px solid #EEE;
+	  }
+	}
+	.fetching {
+	  background-color: #9ccd21;
+	  border: 1px solid #FFF;
+	  height: 40px;
+	  width: 100px;
+	  line-height: 40px;
+	  position: fixed;
+	  top: 165px;
+	  left: 100px;
+	  box-shadow: 0 10px 35px -3px #000;
+	  border-radius: 5px;
+	  text-align: center;
+	  color: #FFF;
+	  z-index: 1;
+
+	  &:after {
+		content: '';
+		position: absolute;
+		top: 12px;
+		left: 6px;
+		width: 15px;
+		height: 15px;
+		background-image: url('../images/ajax-loader.gif');
+		background-size: cover;
+	  }
+	}
+  }
+
+  .contacts-title {
+	padding: 10px;
+	text-align: center;
+	border-bottom: none;
+	font-weight bold;
+	color: #183A63;
+  }
+}
+
+.contact-modal {
+
+  .sent-external-request-model {
+    padding-right:20px;
+    padding-left:20px;
+    word-wrap: break-word;
+
+    .message-label {
+      color: #9ccd21;
+      font-weight bold;
+      text-align center;
+    }
+
+    .message-body {
+      max-height:75px;
+      overflow auto;
+    }
+  }
+}

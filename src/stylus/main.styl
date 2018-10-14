@@ -1,0 +1,93 @@
+@import "font";
+@import "../../node_modules/loaders.css/loaders.min.css";
+
+html {
+	height: 100%;
+	font-family: Typedepot_Centralesans;
+	font-size: 15px;
+	position: relative;
+}
+
+body {
+	height: 100%;
+}
+
+.hidden {
+	display: none;
+}
+
+#container {
+	width: 100%;
+	height: 100%;
+}
+
+@import "ExternalPage";
+@import "components/Avatar";
+@import "components/Header";
+@import "components/NavigationPane";
+@import "components/Users";
+@import "components/SearchBar";
+@import "components/Inbox";
+@import "components/ExternalAccept.styl";
+@import "components/ExternalInvite.styl";
+@import "components/Modal";
+@import "components/Contacts";
+@import "components/ContextMenu";
+@import "components/Groups";
+@import "components/ContactFormView";
+@import "components/ContactFormNew";
+@import "components/login";
+@import "components/Message";
+@import "components/MessageBar";
+@import "components/MessageContextMenu";
+@import "components/MessageSearch";
+@import "components/MessageTimestamp";
+@import "components/AutocompleteTag";
+@import "components/Settings";
+@import "components/ProfilePicture";
+@import "components/WebSettings.styl";
+@import "components/PersonalInfo";
+@import "components/PendingRequests";
+@import "components/Chat";
+@import "components/TermsOfService";
+@import "components/ComposeNew";
+@import "components/Feedback";
+@import "components/ValidationError";
+@import "components/Checkbox";
+@import "components/LoadingOverlay";
+
+#warning {
+	.modal-container {
+		.modal {
+			height: 250px;
+
+			.warning {
+				text-align: center;
+				padding: 0 20px;
+			}
+		}
+	}
+}
+
+.browser-warning {
+	display: none;
+}
+
+.no-ie11,
+.no-postmessage,
+.no-websockets,
+.no-filereader,
+.no-localstorage,
+.no-webworkers,
+.no-pagevisibility {
+	.browser-warning {
+		display: block;
+		color: red;
+		text-align: center;
+
+		ul {
+			list-style: none;
+			color: #000;
+		}
+	}
+}
